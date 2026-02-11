@@ -14,34 +14,31 @@
         body {
             font-family: 'Calibri', 'Arial', sans-serif;
             font-size: 11pt;
-            line-height: 1.4;
+            line-height: 1.35;
             color: #000;
             background: white;
         }
         
         .container {
             max-width: 8.5in;
-            height: 11in;
             margin: 0 auto;
-            padding: 0.75in 0.75in;
+            padding: 0.6in 0.7in;
             background: white;
         }
         
         .header {
             text-align: center;
-            margin-bottom: 16pt;
+            margin-bottom: 14pt;
         }
         
         .name {
             font-size: 24pt;
             font-weight: bold;
-            margin-bottom: 8pt;
-            letter-spacing: 0.5pt;
+            margin-bottom: 6pt;
         }
         
         .contact {
             font-size: 10pt;
-            margin-bottom: 4pt;
             line-height: 1.3;
         }
         
@@ -51,63 +48,75 @@
         }
         
         .section-title {
-            font-size: 12pt;
+            font-size: 11pt;
             font-weight: bold;
             text-transform: uppercase;
-            border-bottom: 1.5pt solid #000;
-            margin-top: 14pt;
+            border-bottom: 1pt solid #000;
+            margin-top: 12pt;
+            margin-bottom: 6pt;
+            padding-bottom: 2pt;
+        }
+        
+        .section-content {
             margin-bottom: 8pt;
-            padding-bottom: 3pt;
-            letter-spacing: 0.5pt;
         }
         
-        .content-block {
-            margin-bottom: 12pt;
+        .flex-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2pt;
         }
         
-        .job-title, .project-title {
+        .job-title {
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        
+        .date {
+            font-size: 10pt;
+            white-space: nowrap;
+        }
+        
+        .company {
+            font-style: italic;
+            font-size: 11pt;
+            margin-bottom: 4pt;
+        }
+        
+        .description {
+            margin-left: 15pt;
+            margin-bottom: 6pt;
+        }
+        
+        .bullet {
+            margin-bottom: 3pt;
+            line-height: 1.3;
+        }
+        
+        .project-title {
             font-weight: bold;
             font-size: 11pt;
             margin-bottom: 2pt;
         }
         
-        .company, .school {
-            font-style: italic;
-            font-size: 11pt;
-            margin-bottom: 6pt;
-        }
-        
-        .description {
-            margin-bottom: 6pt;
-            padding-left: 18pt;
-        }
-        
-        .bullet {
-            margin-bottom: 4pt;
-            line-height: 1.35;
-        }
-        
-        .skills-section {
-            margin-bottom: 0pt;
-        }
-        
         .skills-row {
-            margin-bottom: 4pt;
             display: flex;
+            margin-bottom: 3pt;
         }
         
-        .skill-category {
+        .skill-label {
             font-weight: bold;
-            min-width: 140pt;
+            width: 130pt;
             flex-shrink: 0;
         }
         
-        .skill-list {
+        .skill-value {
             flex: 1;
         }
         
-        .certifications-list {
-            padding-left: 18pt;
+        .cert-list {
+            margin-left: 15pt;
         }
         
         .cert-item {
@@ -121,15 +130,14 @@
             }
             .container {
                 margin: 0;
-                padding: 0.75in 0.75in;
-                width: 8.5in;
-                height: 11in;
+                padding: 0.6in 0.7in;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Header -->
         <div class="header">
             <div class="name">Harsh</div>
             <div class="contact">
@@ -137,28 +145,31 @@
             </div>
         </div>
 
+        <!-- Professional Summary -->
         <div class="section-title">Professional Summary</div>
-        <div class="content-block">
+        <div class="section-content">
             Motivated Software student at VIT Bhopal pursuing expertise in AI/ML development and data analytics. Proficient in building intelligent systems and recommendation engines with strong foundation in machine learning algorithms, cloud technologies, and full-stack development.
         </div>
 
+        <!-- Education -->
         <div class="section-title">Education</div>
-        <div class="content-block">
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+        <div class="section-content">
+            <div class="flex-row">
                 <div class="job-title">Bachelor of Technology in Computer Science</div>
-                <div style="font-size: 10.5pt;">Expected: 2027</div>
+                <div class="date">Expected: 2027</div>
             </div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <div class="flex-row">
                 <div class="company">VIT Bhopal University</div>
-                <div style="font-size: 10.5pt;">CGPA: 7.98/10</div>
+                <div class="date">CGPA: 7.98/10</div>
             </div>
         </div>
 
+        <!-- Experience -->
         <div class="section-title">Experience</div>
-        <div class="content-block">
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+        <div class="section-content">
+            <div class="flex-row">
                 <div class="job-title">Google Cloud Generative AI Intern</div>
-                <div style="font-size: 10.5pt;">November 2025 - January 2026</div>
+                <div class="date">November 2025 - January 2026</div>
             </div>
             <div class="company">Smart Bridge & Smart Internz</div>
             <div class="description">
@@ -168,8 +179,9 @@
             </div>
         </div>
 
+        <!-- Projects -->
         <div class="section-title">Projects</div>
-        <div class="content-block">
+        <div class="section-content">
             <div class="project-title">AI-Powered Mood-Based Recommendation System</div>
             <div class="description">
                 <div class="bullet">• Designed intelligent recommendation engine suggesting movies, games, and music based on user mood analysis</div>
@@ -178,7 +190,7 @@
             </div>
         </div>
         
-        <div class="content-block">
+        <div class="section-content">
             <div class="project-title">Tata GenAI Powered Data Analytics Simulation</div>
             <div class="description">
                 <div class="bullet">• Completed job simulation involving AI-powered data analytics for Tata iQ Financial Services team</div>
@@ -186,32 +198,34 @@
             </div>
         </div>
 
+        <!-- Technical Skills -->
         <div class="section-title">Technical Skills</div>
-        <div class="skills-section">
+        <div class="section-content">
             <div class="skills-row">
-                <div class="skill-category">Languages:</div>
-                <div class="skill-list">Python, JavaScript, Java, C++, SQL</div>
+                <div class="skill-label">Languages:</div>
+                <div class="skill-value">Python, JavaScript, Java, C++, SQL</div>
             </div>
             <div class="skills-row">
-                <div class="skill-category">ML/AI:</div>
-                <div class="skill-list">Pandas, NumPy</div>
+                <div class="skill-label">ML/AI:</div>
+                <div class="skill-value">Pandas, NumPy</div>
             </div>
             <div class="skills-row">
-                <div class="skill-category">Web Technologies:</div>
-                <div class="skill-list">React, Node.js, HTML, CSS</div>
+                <div class="skill-label">Web Technologies:</div>
+                <div class="skill-value">React, Node.js, HTML, CSS</div>
             </div>
             <div class="skills-row">
-                <div class="skill-category">Cloud & Tools:</div>
-                <div class="skill-list">Oracle Cloud, AWS, Git, Docker</div>
+                <div class="skill-label">Cloud & Tools:</div>
+                <div class="skill-value">Oracle Cloud, AWS, Git, Docker</div>
             </div>
             <div class="skills-row">
-                <div class="skill-category">Databases:</div>
-                <div class="skill-list">MySQL, MongoDB, PostgreSQL</div>
+                <div class="skill-label">Databases:</div>
+                <div class="skill-value">MySQL, MongoDB, PostgreSQL</div>
             </div>
         </div>
 
+        <!-- Certifications -->
         <div class="section-title">Certifications</div>
-        <div class="certifications-list">
+        <div class="cert-list">
             <div class="cert-item">• Google IT Support Certificate</div>
             <div class="cert-item">• NPTEL: Introduction to Machine Learning</div>
             <div class="cert-item">• Oracle: Cloud Infrastructure Generative AI Professional</div>
